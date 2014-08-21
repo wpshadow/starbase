@@ -63,7 +63,7 @@ public class game {
 		XE_Display.setTitle(TITLE+"           ---          FPS: "+XE_FPS.getFPS());
 		XE_Display.update();
 		XE_Display.clear();
-		XE_Display.limitFPS(MAXFRAMES);
+		//XE_Display.limitFPS(MAXFRAMES);
 	}
 	
 	public static void clear(){

@@ -10,7 +10,10 @@ public class game {
 	public static final String TITLE = "Starbase";
 	public static int WIDTH 	= 800;
 	public static int HEIGHT 	= 600;
-	public static int MAXFRAMES = 60;
+	public static int MAXFRAMES = 0;
+	
+	public static loader load = new loader();
+	
 	
 	public static void main(String[] args){
 		
@@ -39,10 +42,16 @@ public class game {
 		XE_Display.enableVSYNC(false);
 		XE_Display.setIcon("res/icons/icon16.png", "res/icons/icon32.png");
 		
+		load.loadGround0();
+		
+		
 	}
 	
 	public static void run(){
 		while(!XE_Display.isCloseRequested()){
+			
+			
+			
 			input();
 			render();
 			update();
@@ -56,6 +65,7 @@ public class game {
 	
 	public static void render(){
 		// draw stuff here!
+		load.drawGround0();
 	}
 	
 	public static void update(){	
